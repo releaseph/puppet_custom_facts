@@ -1,4 +1,4 @@
-environments = ['dev', 'uat', 'test-deploy', 'testdeploy', 'staging']
+environments = [/(dev)/i, /(uat)/i, /(test-deploy)/i, /(testdeploy)/i, /(staging)/i]
 
 environments_regex = Regexp.union(environments)
 if Facter.value(:hostname).match(environments_regex)

@@ -1,6 +1,6 @@
 roles = [
     /(cjo)(?:[0-9]|[-])/i,
-    /(stahl)(?:[0-9]|[-])/i,
+    /(stahl)(?:[0-9]|[-])/i
 ]
 
 roles_regex = Regexp.union(roles)

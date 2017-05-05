@@ -1,9 +1,9 @@
 environments = [ 
-	/(dev)/i,
-	/(uat)/i,
-	/(test-deploy)/i,
-	/(testdeploy)/i,
-	/(staging)/i
+    /(dev)/i,
+    /(uat)/i,
+    /(test-deploy)/i,
+    /(testdeploy)/i,
+    /(staging)/i
 ]
 
 environments_regex = Regexp.union(environments)

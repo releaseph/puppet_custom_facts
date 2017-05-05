@@ -7,4 +7,10 @@ if Facter.value(:hostname).match(environments_regex)
             $1
         end
     end
+else
+    Facter.add('puppet_env') do
+        setcode do
+            'live'
+        end
+    end
 end

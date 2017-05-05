@@ -1,4 +1,5 @@
-if Facter.value(:hostname).match(/(dev|uat|test-deploy|testdeploy|staging)/i)
+environments = 'dev|uat|test-deploy|testdeploy|staging'
+if Facter.value(:hostname).match(/(#environments)/i)
     if ($1 == 'test-deploy') || ($1 == 'testdeploy')
         Facter.add('puppet_env') do
             setcode do

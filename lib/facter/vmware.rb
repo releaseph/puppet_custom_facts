@@ -2,7 +2,7 @@ roles = [
     /(cjo)(?:[0-9]|[-])/i,
     /(stahl)(?:[0-9]|[-])/i,
 ]
-environments = [ '/(dev)/', '/(uat)/', '/(test-deploy)/', '/(testdeploy)/', '/(staging)/' ]
+environments = [ /(dev)/i, /(uat)/i, /(test-deploy)/i, /(testdeploy)/i, /(staging)/i ]
 
 roles_regex = Regexp.union(roles)
 if Facter.value(:hostname).match(roles_regex)
